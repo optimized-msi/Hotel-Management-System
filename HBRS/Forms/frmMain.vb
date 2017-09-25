@@ -10,7 +10,7 @@
     End Sub
 
     Private Sub frmMain_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-
+        frmLogin.Show()
     End Sub
 
     Private Sub toolbarCheckIn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles toolbarCheckIn.Click
@@ -27,8 +27,6 @@
     Private Sub ToolStripButton12_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripButton12.Click
         Dim out_app As String = MsgBox("Logout from application?", vbQuestion + vbYesNo, "Logout")
         If out_app = vbYes Then
-            con.Close()
-            Me.Hide()
             frmLogin.Show()
         End If
     End Sub
@@ -57,7 +55,7 @@
         Dim out_app As String = MsgBox("Logout from application?", vbQuestion + vbYesNo, "Logout")
         If out_app = vbYes Then
             Me.Hide()
-            frmLogin.Show()
+            ' frmLoginNew.Show()
         End If
     End Sub
 

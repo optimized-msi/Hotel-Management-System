@@ -49,11 +49,18 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DeathCodez">
+      <HintPath>..\..\PCOM\PCOM-POS-SYSTEM\POS\POS\DeathCodez.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -122,12 +129,6 @@
       <DependentUpon>frmMain.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmLogin.Designer.vb">
-      <DependentUpon>frmLogin.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\frmLogin.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Forms\frmReserve.Designer.vb">
       <DependentUpon>frmReserve.vb</DependentUpon>
     </Compile>
@@ -164,7 +165,10 @@
     <Compile Include="Forms\frmSelectRoom.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Modules\database.vb" />
     <Compile Include="Modules\module.vb" />
+    <Compile Include="Modules\mod_system.vb" />
+    <Compile Include="Modules\security.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -179,6 +183,43 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="UserManagement\Class\frmaddPrivilege.Designer.vb">
+      <DependentUpon>frmaddPrivilege.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserManagement\Class\frmaddPrivilege.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserManagement\Class\Sys_user.vb" />
+    <Compile Include="UserManagement\Class\UserRuleCol.vb" />
+    <Compile Include="UserManagement\Class\User_Line_RULES.vb" />
+    <Compile Include="UserManagement\Class\User_rule.vb" />
+    <Compile Include="UserManagement\frmChangePasswordNew.Designer.vb">
+      <DependentUpon>frmChangePasswordNew.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserManagement\frmChangePasswordNew.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserManagement\frmLogin.Designer.vb">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserManagement\frmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserManagement\frmUserInfor.Designer.vb">
+      <DependentUpon>frmUserInfor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserManagement\frmUserInfor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserManagement\frmUserManagement.Designer.vb">
+      <DependentUpon>frmUserManagement.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserManagement\frmUserManagement.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserManagement\watermark.vb">
+      <SubType>Component</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -202,9 +243,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmGuest.resx">
       <DependentUpon>frmGuest.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmLogin.resx">
-      <DependentUpon>frmLogin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmMain.resx">
       <DependentUpon>frmMain.vb</DependentUpon>
@@ -233,8 +271,26 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\Class\frmaddPrivilege.resx">
+      <DependentUpon>frmaddPrivilege.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\frmChangePasswordNew.resx">
+      <DependentUpon>frmChangePasswordNew.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\frmLogin.resx">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\frmUserInfor.resx">
+      <DependentUpon>frmUserInfor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\frmUserManagement.resx">
+      <DependentUpon>frmUserManagement.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="HMSJE.GDB">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
