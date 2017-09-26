@@ -34,9 +34,9 @@ Partial Class frmSelectGuest
         Me.lvGuest.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4})
         Me.lvGuest.FullRowSelect = True
         Me.lvGuest.GridLines = True
-        Me.lvGuest.Location = New System.Drawing.Point(12, 22)
+        Me.lvGuest.Location = New System.Drawing.Point(3, 2)
         Me.lvGuest.Name = "lvGuest"
-        Me.lvGuest.Size = New System.Drawing.Size(459, 211)
+        Me.lvGuest.Size = New System.Drawing.Size(490, 299)
         Me.lvGuest.TabIndex = 60
         Me.lvGuest.UseCompatibleStateImageBehavior = False
         Me.lvGuest.View = System.Windows.Forms.View.Details
@@ -68,9 +68,8 @@ Partial Class frmSelectGuest
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(483, 257)
+        Me.ClientSize = New System.Drawing.Size(505, 313)
         Me.Controls.Add(Me.lvGuest)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "frmSelectGuest"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = " Double click to select guest"
