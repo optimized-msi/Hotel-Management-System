@@ -15,7 +15,7 @@ Public Class frmCheckin
         Dim time As DateTime = DateTime.Now
         Dim format As String = "MM/d/yyyy"
         txtCheckInDate.Text = time.ToString(format)
-        dtCheckOutDate.Text = Now.AddDays(1D)
+        dtpCheckIn.Text = Now.AddDays(1D)
         transID()
         pop_discount()
         display_checkin()
@@ -39,7 +39,7 @@ Public Class frmCheckin
         con.Close()
     End Sub
 
-    Private Sub bttnCheckIn_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles bttnCheckIn.Click
+    Private Sub bttnCheckIn_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCheckIn.Click
         Dim children As Integer = Val(txtChildren.Text)
         Dim adult As Integer = Val(txtAdults.Text)
         Dim advance As Integer = Val(txtAdvance.Text)
@@ -62,7 +62,7 @@ Public Class frmCheckin
                                                 lblGuestID.Text & "','" &
                                                 txtRoomNumber.Text & "','" &
                                                 txtCheckInDate.Text & "','" &
-                                                dtCheckOutDate.Text & "','" &
+                                                dtpCheckIn.Text & "','" &
                                                 txtChildren.Text & "','" &
                                                 txtAdults.Text & "','" &
                                                 txtAdvance.Text & "','" &
@@ -96,36 +96,36 @@ Public Class frmCheckin
         End If
     End Sub
 
-    Private Sub bttnCancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles bttnCancel.Click
+    Private Sub bttnCancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCancel.Click
         clear_text()
     End Sub
 
-    Private Sub dtCheckOutDate_ValueChanged_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles dtCheckOutDate.ValueChanged
-        Dim T As TimeSpan = dtCheckOutDate.Value - Now
+    Private Sub dtCheckOutDate_ValueChanged_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles dtpCheckIn.ValueChanged
+        Dim T As TimeSpan = dtpCheckIn.Value - Now
         If T.Days < 1 Then
-            dtCheckOutDate.Text = Now.AddDays(1D)
-            txtDaysNumber.Text = "1"
+            dtpCheckIn.Text = Now.AddDays(1D)
+            txtDaysCount.Text = "1"
         Else
-            txtDaysNumber.Text = T.Days + 1
+            txtDaysCount.Text = T.Days + 1
         End If
-        lblTotal.Text = Val(txtRoomRate.Text) * Val(txtDaysNumber.Text)
-        txtSubTotal.Text = Val(txtRoomRate.Text) * Val(txtDaysNumber.Text)
+        lblTotal.Text = Val(txtRoomRate.Text) * Val(txtDaysCount.Text)
+        txtSubTotal.Text = Val(txtRoomRate.Text) * Val(txtDaysCount.Text)
     End Sub
 
-    Private Sub bttnSearchGuest_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles bttnSearchGuest.Click
+    Private Sub bttnSearchGuest_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBrowseGuest.Click
         frmSelectGuest.ShowDialog()
     End Sub
 
-    Private Sub bttnSearchRoom_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles bttnSearchRoom.Click
+    Private Sub bttnSearchRoom_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSearchRoom.Click
         frmSelectRoom.ShowDialog()
     End Sub
 
     Private Sub txtRoomRate_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtRoomRate.TextChanged
-        lblTotal.Text = Val(txtRoomRate.Text) * Val(txtDaysNumber.Text)
-        txtSubTotal.Text = (Val(txtRoomRate.Text) * Val(txtDaysNumber.Text)).ToString("00.00")
+        lblTotal.Text = Val(txtRoomRate.Text) * Val(txtDaysCount.Text)
+        txtSubTotal.Text = (Val(txtRoomRate.Text) * Val(txtDaysCount.Text)).ToString("00.00")
     End Sub
 
-    Private Sub bttnAddAdult_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles bttnAddAdult.Click
+    Private Sub bttnAddAdult_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAddAdult.Click
         Dim tao As Integer
         tao = Val(txtAdults.Text) + Val(txtChildren.Text)
         If tao = Val(lblNoOfOccupancy.Text) Then
@@ -135,7 +135,7 @@ Public Class frmCheckin
         End If
     End Sub
 
-    Private Sub bttnAddChildren_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles bttnAddChildren.Click
+    Private Sub bttnAddChildren_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAddChildren.Click
         Dim tao As Integer
         tao = Val(txtAdults.Text) + Val(txtChildren.Text)
         If tao = Val(lblNoOfOccupancy.Text) Then
@@ -145,7 +145,7 @@ Public Class frmCheckin
         End If
     End Sub
 
-    Private Sub bttnSubAdult_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles bttnSubAdult.Click
+    Private Sub bttnSubAdult_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSubAdult.Click
         If Val(txtAdults.Text) = 0 Then
             txtAdults.Text = Val(txtAdults.Text)
         Else
@@ -153,7 +153,7 @@ Public Class frmCheckin
         End If
     End Sub
 
-    Private Sub bttnSubChildren_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles bttnSubChildren.Click
+    Private Sub bttnSubChildren_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSubChildren.Click
         If Val(txtChildren.Text) = 0 Then
             txtChildren.Text = Val(txtChildren.Text)
         Else
@@ -228,7 +228,7 @@ Public Class frmCheckin
         Dim time As DateTime = DateTime.Now
         Dim format As String = "MM/d/yyyy"
         txtCheckInDate.Text = time.ToString(format)
-        dtCheckOutDate.Text = Now.AddDays(1D)
+        dtpCheckIn.Text = Now.AddDays(1D)
     End Sub
 
     Private Sub display_checkin()
@@ -240,7 +240,7 @@ Public Class frmCheckin
 
         rs.Fill(Dt)
         Dim indx As Integer
-        lvlcheckin.Items.Clear()
+        lvCheckIn.Items.Clear()
         For indx = 0 To Dt.Rows.Count - 1
             Dim lv As New ListViewItem
             Dim getdate As TimeSpan
@@ -258,7 +258,7 @@ Public Class frmCheckin
             lv.SubItems.Add(Dt.Rows(indx).Item("CheckInDate"))
             lv.SubItems.Add(Dt.Rows(indx).Item("CheckOutDate"))
 
-            dtIn.Value = Dt.Rows(indx).Item("CheckOutDate")
+            dtpInOut.Value = Dt.Rows(indx).Item("CheckOutDate")
             dtOut.Value = Dt.Rows(indx).Item("CheckInDate")
 
             getdate = dtIn.Value - dtOut.Value
@@ -281,7 +281,7 @@ Public Class frmCheckin
                 lv.SubItems.Add("0")
             End If
 
-            lvlcheckin.Items.Add(lv)
+            lvCheckIn.Items.Add(lv)
         Next
         rs.Dispose()
         con.Close()
