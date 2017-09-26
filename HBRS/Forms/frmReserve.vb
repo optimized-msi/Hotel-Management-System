@@ -17,11 +17,7 @@ Public Class frmReserve
     End Sub
 
     Private Sub bttnSearchGuest_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles bttnSearchGuest.Click
-        frmSelectGuest.ShowDialog()
-    End Sub
-
-    Private Sub bttnSearchRoom_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles bttnSearchRoom.Click
-        frmSelectRoom.ShowDialog()
+        frmGuestList.ShowDialog()
     End Sub
 
     Private Sub bttnCancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles bttnCancel.Click
