@@ -64,19 +64,31 @@
 
 #Region "Procedures"
     Friend Sub SaveGuest()
-        Dim mysql As String = "Select * From tblCustomer"
+        Dim mysql As String = "Select * From tblCustomer Where FirstName = '" & _firstName & "' And MiddleName = '" & _middleName & "' And LastName = '" & _lastName & "'"
         Dim ds As DataSet = LoadSQL(mysql, "tblCustomer")
-        Dim dsNewRow As DataRow
 
-        dsNewRow = ds.Tables("tblCustomer").NewRow
-        With dsNewRow
-            .Item("FirstName") = _firstName
-            .Item("MiddleName") = _middleName
-            .Item("LastName") = _lastName
-            .Item("AddressID") = _address.ID
-        End With
-        ds.Tables("tblCustomer").Rows.Add(dsNewRow)
-        database.SaveEntry(ds, True)
+        If ds.Tables(0).Rows.Count > 0 Then
+            With ds.Tables(0).Rows(0)
+                .Item("FirstName") = _firstName
+                .Item("MiddleName") = _middleName
+                .Item("LastName") = _lastName
+                .Item("AddressID") = _address.ID
+            End With
+            SaveEntry(ds)
+        Else
+
+            Dim dsNewRow As DataRow
+
+            dsNewRow = ds.Tables("tblCustomer").NewRow
+            With dsNewRow
+                .Item("FirstName") = _firstName
+                .Item("MiddleName") = _middleName
+                .Item("LastName") = _lastName
+                .Item("AddressID") = _address.ID
+            End With
+            ds.Tables("tblCustomer").Rows.Add(dsNewRow)
+            SaveEntry(ds, True)
+        End If
     End Sub
 
     Friend Sub LoadGuest()

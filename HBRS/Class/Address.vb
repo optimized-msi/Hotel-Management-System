@@ -84,6 +84,25 @@
 #End Region
 
 #Region "Procedures"
+    Friend Sub SaveAddress()
+        Dim mysql As String = "Select * From tblAddress"
+        Dim ds As DataSet = LoadSQL(mysql, "tblAddress")
+        Dim dsNewRow As DataRow
+
+        dsNewRow = ds.Tables("tblAddress").NewRow
+        With dsNewRow
+            .Item("City") = _city
+            .Item("Province") = _province
+            .Item("Municipal") = _municipal
+            .Item("Barangay") = _barangay
+            .Item("Subdivision") = _subdivision
+            .Item("Purok") = _purok
+            .Item("Street") = _street
+        End With
+        ds.Tables("tblAddress").Rows.Add(dsNewRow)
+        SaveEntry(ds, True)
+    End Sub
+
     Friend Sub LoadAddress()
         Dim mysql As String = "Select * From tblAddress Where ID = " & _id
         Dim ds As DataSet = LoadSQL(mysql, "tblAddress")
