@@ -40,6 +40,16 @@
         End Set
     End Property
 
+    Private _suffix As String
+    Public Property Suffix() As String
+        Get
+            Return _suffix
+        End Get
+        Set(ByVal value As String)
+            _suffix = value
+        End Set
+    End Property
+
     Private _address As New Address
     Public Property Address() As Address
         Get

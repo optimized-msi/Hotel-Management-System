@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmSelectRoom
+Partial Class frmRoomList
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -27,16 +27,21 @@ Partial Class frmSelectRoom
         Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader5 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.txtSearch = New System.Windows.Forms.TextBox()
+        Me.btnSearch = New System.Windows.Forms.Button()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'lvRoom
         '
-        Me.lvRoom.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4})
+        Me.lvRoom.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4, Me.ColumnHeader5})
         Me.lvRoom.FullRowSelect = True
         Me.lvRoom.GridLines = True
-        Me.lvRoom.Location = New System.Drawing.Point(12, 28)
+        Me.lvRoom.Location = New System.Drawing.Point(12, 66)
         Me.lvRoom.Name = "lvRoom"
-        Me.lvRoom.Size = New System.Drawing.Size(429, 212)
+        Me.lvRoom.Size = New System.Drawing.Size(526, 264)
         Me.lvRoom.TabIndex = 62
         Me.lvRoom.UseCompatibleStateImageBehavior = False
         Me.lvRoom.View = System.Windows.Forms.View.Details
@@ -62,18 +67,53 @@ Partial Class frmSelectRoom
         '
         Me.ColumnHeader4.Text = "No Of Occupancy"
         Me.ColumnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.ColumnHeader4.Width = 100
+        Me.ColumnHeader4.Width = 105
         '
-        'frmSelectRoom
+        'ColumnHeader5
+        '
+        Me.ColumnHeader5.Text = "Status"
+        Me.ColumnHeader5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ColumnHeader5.Width = 100
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.btnSearch)
+        Me.GroupBox1.Controls.Add(Me.txtSearch)
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 2)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(526, 58)
+        Me.GroupBox1.TabIndex = 63
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Search"
+        '
+        'txtSearch
+        '
+        Me.txtSearch.Location = New System.Drawing.Point(6, 19)
+        Me.txtSearch.Name = "txtSearch"
+        Me.txtSearch.Size = New System.Drawing.Size(432, 20)
+        Me.txtSearch.TabIndex = 0
+        '
+        'btnSearch
+        '
+        Me.btnSearch.Location = New System.Drawing.Point(445, 17)
+        Me.btnSearch.Name = "btnSearch"
+        Me.btnSearch.Size = New System.Drawing.Size(75, 23)
+        Me.btnSearch.TabIndex = 1
+        Me.btnSearch.Text = "&Search"
+        Me.btnSearch.UseVisualStyleBackColor = True
+        '
+        'frmRoomListMonitor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(455, 259)
+        Me.ClientSize = New System.Drawing.Size(550, 342)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.lvRoom)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
-        Me.Name = "frmSelectRoom"
+        Me.Name = "frmRoomListMonitor"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = " Double click to select room"
+        Me.Text = "Room List"
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -82,4 +122,8 @@ Partial Class frmSelectRoom
     Friend WithEvents ColumnHeader2 As System.Windows.Forms.ColumnHeader
     Friend WithEvents ColumnHeader3 As System.Windows.Forms.ColumnHeader
     Friend WithEvents ColumnHeader4 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents ColumnHeader5 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents btnSearch As System.Windows.Forms.Button
+    Friend WithEvents txtSearch As System.Windows.Forms.TextBox
 End Class

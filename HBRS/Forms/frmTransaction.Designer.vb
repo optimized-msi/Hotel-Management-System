@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmCheckin
+Partial Class frmTransaction
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -23,7 +23,7 @@ Partial Class frmCheckin
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim ListViewItem1 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"09/26/2017", "Hoo Jun Maa", "09/27/2017", "2700", "1500", "Active"}, -1)
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmCheckin))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmTransaction))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.btnCheckIn = New System.Windows.Forms.Button()
@@ -207,7 +207,6 @@ Partial Class frmCheckin
         Me.txtRoomNumber.Location = New System.Drawing.Point(127, 59)
         Me.txtRoomNumber.Multiline = True
         Me.txtRoomNumber.Name = "txtRoomNumber"
-        Me.txtRoomNumber.ReadOnly = True
         Me.txtRoomNumber.Size = New System.Drawing.Size(115, 25)
         Me.txtRoomNumber.TabIndex = 38
         Me.txtRoomNumber.Text = "ITM 00001"
@@ -250,7 +249,6 @@ Partial Class frmCheckin
         Me.txtGuestName.Location = New System.Drawing.Point(127, 22)
         Me.txtGuestName.Multiline = True
         Me.txtGuestName.Name = "txtGuestName"
-        Me.txtGuestName.ReadOnly = True
         Me.txtGuestName.Size = New System.Drawing.Size(210, 25)
         Me.txtGuestName.TabIndex = 35
         Me.txtGuestName.Text = "Hoo Jun Maa"
@@ -665,7 +663,7 @@ Partial Class frmCheckin
         Me.txtSearch.Size = New System.Drawing.Size(316, 20)
         Me.txtSearch.TabIndex = 0
         '
-        'frmCheckin
+        'frmTransaction
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -673,7 +671,7 @@ Partial Class frmCheckin
         Me.Controls.Add(Me.TabControl1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Name = "frmCheckin"
+        Me.Name = "frmTransaction"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = " "
         Me.TabControl1.ResumeLayout(False)
