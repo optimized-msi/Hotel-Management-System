@@ -1,6 +1,7 @@
 ﻿Public Class frmGuest
     Private GuestAddress As Address
     Private GuestInfo As Guest
+
     Private Sub btnBrowseAddress_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBrowseAddress.Click
         Dim secured_str As String = txtCity.Text
         secured_str = DreadKnight(secured_str)
@@ -9,7 +10,7 @@
     End Sub
 
     Private Sub frmGuest_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-
+        ClearText()
     End Sub
 
     Friend Sub LoadAddress(ByVal tmpAddress As Address)
@@ -38,6 +39,7 @@
         End With
 
         MsgBox("Guest Added", MsgBoxStyle.Information, "Hotel Management")
+        Me.Close()
     End Sub
 
     Private Function isGuestValid() As Boolean
@@ -47,4 +49,15 @@
 
         Return True
     End Function
+
+    Private Sub ClearText()
+        txtFirstName.Clear()
+        txtMiddleName.Clear()
+        txtLastName.Clear()
+        mtbContactNum.Clear()
+        txtCity.Clear()
+        txtBarangay.Clear()
+        txtProvince.Clear()
+        txtSreet.Clear()
+    End Sub
 End Class

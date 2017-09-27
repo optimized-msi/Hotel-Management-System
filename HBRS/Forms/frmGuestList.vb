@@ -15,7 +15,7 @@
 
         If str <> "" Then
             mySql = "Select C.ID, C.FirstName, C.MiddleName, C.Lastname, "
-            mySql &= "A.City '| |' A.Province '| |' A.Barangay '| |' A.Subdivision '| |' A.Purok '| |' A.Street as Address "
+            mySql &= "A.City || ' ' || A.Province || ' ' || A.Barangay || ' ' || A.Subdivision || ' ' || A.Purok || ' ' || A.Street as Address "
             mySql &= "From tblCustomer C "
             mySql &= "Inner Join tblAddress A On A.ID = C.AddressID "
 
@@ -30,7 +30,7 @@
             Next
         Else
             mySql = "Select First 10 C.ID, C.FirstName, C.MiddleName, C.LastName, "
-            mySql &= "A.City '| |' A.Province '| |' A.Barangay '| |' A.Subdivision '| |' A.Purok '| |' A.Street as Address "
+            mySql &= "A.City || ' ' || A.Province || ' ' ||  A.Barangay || ' ' || A.Subdivision || ' ' || A.Purok || ' '|| A.Street as Address "
             mySql &= "From tblCustomer C "
             mySql &= "Inner Join tblAddress A On A.ID = C.AddressID "
         End If

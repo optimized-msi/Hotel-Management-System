@@ -131,8 +131,8 @@
     Private Sub btnSearchRoom_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSearchRoom.Click
         Dim secured_str As String = txtRoomNumber.Text
         secured_str = DreadKnight(secured_str)
-        frmGuestList.SearchSelect(secured_str, FormName.Transaction)
-        frmGuestList.Show()
+        frmRoomList.SearchSelect(secured_str, FormName.Room)
+        frmRoomList.Show()
     End Sub
 
     Private Sub frmTransaction_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
@@ -142,5 +142,17 @@
 
     Private Sub btnSearch_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSearch.Click
 
+    End Sub
+
+    Private Sub dtpCheckIn_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles dtpCheckIn.ValueChanged
+        ComputeTotalDays()
+    End Sub
+
+    Private Sub dtpCheckOut_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles dtpCheckOut.ValueChanged
+        ComputeTotalDays()
+    End Sub
+
+    Private Sub ComputeTotalDays()
+        txtDaysCount.Text = dtpCheckOut.Value.Subtract(dtpCheckIn.Value.ToShortDateString).Days
     End Sub
 End Class

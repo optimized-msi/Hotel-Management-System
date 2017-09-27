@@ -24,13 +24,13 @@
     End Sub
 
     Private Sub Additem(ByVal dr As DataRow)
-        Dim lv As ListViewItem = lvRoom.Items.Add(dr.Item("ID"))
+        Dim lv As ListViewItem = lvRoom.Items.Add(dr.Item("RoomNum"))
         With dr
-            lv.SubItems.Add(.Item("RoomNum"))
             lv.SubItems.Add(.Item("RoomType"))
             lv.SubItems.Add(.Item("RoomRate"))
             lv.SubItems.Add(.Item("Capacity"))
             lv.SubItems.Add(.Item("Status"))
+            lv.Tag = .Item("ID")
         End With
     End Sub
 
@@ -41,7 +41,7 @@
     Private Sub lvRoom_DoubleClick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lvRoom.DoubleClick
         If lvRoom.Items.Count = 0 Then Exit Sub
 
-        Dim idx As Integer = CInt(lvRoom.FocusedItem.Text)
+        Dim idx As Integer = CInt(lvRoom.FocusedItem.Tag)
         GetRoom = New Room
         With GetRoom
             .ID = idx

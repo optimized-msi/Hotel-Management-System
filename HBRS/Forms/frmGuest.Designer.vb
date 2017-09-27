@@ -41,8 +41,8 @@ Partial Class frmGuest
         Me.txtBarangay = New System.Windows.Forms.TextBox()
         Me.txtSreet = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.mtbContactNum = New System.Windows.Forms.MaskedTextBox()
         Me.btnBrowseAddress = New System.Windows.Forms.Button()
+        Me.mtbContactNum = New System.Windows.Forms.MaskedTextBox()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -70,6 +70,7 @@ Partial Class frmGuest
         Me.txtFirstName.Name = "txtFirstName"
         Me.txtFirstName.Size = New System.Drawing.Size(216, 20)
         Me.txtFirstName.TabIndex = 1
+        Me.txtFirstName.Text = "HOO"
         '
         'Label2
         '
@@ -95,6 +96,7 @@ Partial Class frmGuest
         Me.txtMiddleName.Name = "txtMiddleName"
         Me.txtMiddleName.Size = New System.Drawing.Size(216, 20)
         Me.txtMiddleName.TabIndex = 4
+        Me.txtMiddleName.Text = "JUN"
         '
         'txtLastName
         '
@@ -102,6 +104,7 @@ Partial Class frmGuest
         Me.txtLastName.Name = "txtLastName"
         Me.txtLastName.Size = New System.Drawing.Size(216, 20)
         Me.txtLastName.TabIndex = 5
+        Me.txtLastName.Text = "MAA"
         '
         'Label4
         '
@@ -170,6 +173,7 @@ Partial Class frmGuest
         Me.txtCity.Name = "txtCity"
         Me.txtCity.Size = New System.Drawing.Size(169, 20)
         Me.txtCity.TabIndex = 15
+        Me.txtCity.Text = "GENERAL"
         '
         'txtProvince
         '
@@ -177,6 +181,7 @@ Partial Class frmGuest
         Me.txtProvince.Name = "txtProvince"
         Me.txtProvince.Size = New System.Drawing.Size(216, 20)
         Me.txtProvince.TabIndex = 16
+        Me.txtProvince.Text = "SOUTH COTABATO"
         '
         'txtBarangay
         '
@@ -184,6 +189,7 @@ Partial Class frmGuest
         Me.txtBarangay.Name = "txtBarangay"
         Me.txtBarangay.Size = New System.Drawing.Size(216, 20)
         Me.txtBarangay.TabIndex = 17
+        Me.txtBarangay.Text = "DI MAKITA"
         '
         'txtSreet
         '
@@ -191,6 +197,7 @@ Partial Class frmGuest
         Me.txtSreet.Name = "txtSreet"
         Me.txtSreet.Size = New System.Drawing.Size(216, 20)
         Me.txtSreet.TabIndex = 18
+        Me.txtSreet.Text = "PUROK HANAP"
         '
         'GroupBox1
         '
@@ -220,14 +227,6 @@ Partial Class frmGuest
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Personal Information"
         '
-        'mtbContactNum
-        '
-        Me.mtbContactNum.Location = New System.Drawing.Point(104, 179)
-        Me.mtbContactNum.Mask = "(999) 000-0000"
-        Me.mtbContactNum.Name = "mtbContactNum"
-        Me.mtbContactNum.Size = New System.Drawing.Size(216, 20)
-        Me.mtbContactNum.TabIndex = 19
-        '
         'btnBrowseAddress
         '
         Me.btnBrowseAddress.Location = New System.Drawing.Point(284, 214)
@@ -236,6 +235,15 @@ Partial Class frmGuest
         Me.btnBrowseAddress.TabIndex = 2
         Me.btnBrowseAddress.Text = ". . ."
         Me.btnBrowseAddress.UseVisualStyleBackColor = True
+        '
+        'mtbContactNum
+        '
+        Me.mtbContactNum.Location = New System.Drawing.Point(104, 179)
+        Me.mtbContactNum.Mask = "(9999) 000-0000"
+        Me.mtbContactNum.Name = "mtbContactNum"
+        Me.mtbContactNum.Size = New System.Drawing.Size(216, 20)
+        Me.mtbContactNum.TabIndex = 19
+        Me.mtbContactNum.Text = "09123456789"
         '
         'frmGuest
         '
