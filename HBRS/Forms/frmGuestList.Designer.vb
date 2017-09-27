@@ -25,10 +25,11 @@ Partial Class frmGuestList
         Me.lvGuest = New System.Windows.Forms.ListView()
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.btnSearch = New System.Windows.Forms.Button()
         Me.txtSearch = New System.Windows.Forms.TextBox()
-        Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.btnAdd = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -54,6 +55,11 @@ Partial Class frmGuestList
         Me.ColumnHeader2.Text = "Full Name"
         Me.ColumnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.ColumnHeader2.Width = 228
+        '
+        'ColumnHeader3
+        '
+        Me.ColumnHeader3.Text = "Address"
+        Me.ColumnHeader3.Width = 331
         '
         'GroupBox1
         '
@@ -82,21 +88,26 @@ Partial Class frmGuestList
         Me.txtSearch.Size = New System.Drawing.Size(508, 20)
         Me.txtSearch.TabIndex = 0
         '
-        'ColumnHeader3
+        'btnAdd
         '
-        Me.ColumnHeader3.Text = "Address"
-        Me.ColumnHeader3.Width = 331
+        Me.btnAdd.Location = New System.Drawing.Point(12, 367)
+        Me.btnAdd.Name = "btnAdd"
+        Me.btnAdd.Size = New System.Drawing.Size(75, 23)
+        Me.btnAdd.TabIndex = 2
+        Me.btnAdd.Text = "&Add"
+        Me.btnAdd.UseVisualStyleBackColor = True
         '
         'frmGuestList
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(620, 368)
+        Me.ClientSize = New System.Drawing.Size(620, 401)
+        Me.Controls.Add(Me.btnAdd)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.lvGuest)
         Me.Name = "frmGuestList"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = " Double click to select guest"
+        Me.Text = "Guest List"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
@@ -109,4 +120,5 @@ Partial Class frmGuestList
     Friend WithEvents btnSearch As System.Windows.Forms.Button
     Friend WithEvents txtSearch As System.Windows.Forms.TextBox
     Friend WithEvents ColumnHeader3 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents btnAdd As System.Windows.Forms.Button
 End Class

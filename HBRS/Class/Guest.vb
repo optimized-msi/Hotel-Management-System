@@ -60,6 +60,16 @@
         End Set
     End Property
 
+    Private _contactNum As String
+    Public Property CantactNum() As String
+        Get
+            Return _contactNum
+        End Get
+        Set(ByVal value As String)
+            _contactNum = value
+        End Set
+    End Property
+
 #End Region
 
 #Region "Procedures"
@@ -73,6 +83,7 @@
                 .Item("MiddleName") = _middleName
                 .Item("LastName") = _lastName
                 .Item("AddressID") = _address.ID
+                .Item("ContactNum") = _contactNum
             End With
             SaveEntry(ds)
         Else
@@ -85,6 +96,7 @@
                 .Item("MiddleName") = _middleName
                 .Item("LastName") = _lastName
                 .Item("AddressID") = _address.ID
+                .Item("ContactNum") = _contactNum
             End With
             ds.Tables("tblCustomer").Rows.Add(dsNewRow)
             SaveEntry(ds, True)
@@ -112,6 +124,8 @@
             tmpAddress.ID = .Item("AddressID")
             tmpAddress.LoadAddress()
             _address = tmpAddress
+
+            _contactNum = .Item("ContactNum")
         End With
     End Sub
 #End Region

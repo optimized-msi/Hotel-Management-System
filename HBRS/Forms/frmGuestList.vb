@@ -74,4 +74,8 @@
     Private Sub btnSearch_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSearch.Click
         LoadGuest(txtSearch.Text)
     End Sub
+
+    Private Sub btnAdd_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAdd.Click
+        frmGuest.Show()
+    End Sub
 End Class
