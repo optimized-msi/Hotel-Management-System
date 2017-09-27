@@ -64,6 +64,34 @@
 #End Region
 
 #Region "Procedures"
+
+    Friend Sub SaveRoom()
+        Dim mysql As String = "Select * From tblRoom Where RoomNum = '" & _roomNum & "'"
+        Dim ds As DataSet = LoadSQL(mysql, "tblRoom")
+
+        If ds.Tables(0).Rows.Count > 0 Then
+            With ds.Tables(0).Rows(0)
+                .Item("RoomType") = _roomType
+                .Item("RoomRate") = _RoomRate
+                .Item("Capacity") = _capacity
+                .Item("Status") = _status
+            End With
+            SaveEntry(ds)
+        Else
+            Dim dsNewRow As DataRow
+
+            dsNewRow = ds.Tables("tblRoom").NewRow
+            With dsNewRow
+                .Item("RoomNum") = _roomNum
+                .Item("RoomType") = _roomType
+                .Item("RoomRate") = _RoomRate
+                .Item("Capacity") = _capacity
+                .Item("Status") = _status
+            End With
+            ds.Tables("tblRoom").Rows.Add(dsNewRow)
+            SaveEntry(ds, True)
+        End If
+    End Sub
     Friend Sub LoadRoom()
         Dim mysql As String = "Select * From tblRoom Where ID =" & _id
         Dim ds As DataSet = LoadSQL(mysql, "tblRoom")

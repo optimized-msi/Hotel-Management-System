@@ -84,6 +84,24 @@
     <Compile Include="Class\Guest.vb" />
     <Compile Include="Class\Room.vb" />
     <Compile Include="Class\Transaction.vb" />
+    <Compile Include="Forms\frmAddress.Designer.vb">
+      <DependentUpon>frmAddress.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAddress.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmGuest.Designer.vb">
+      <DependentUpon>frmGuest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmGuest.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSetup.Designer.vb">
+      <DependentUpon>frmSetup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSetup.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\frmTransaction.Designer.vb">
       <DependentUpon>frmTransaction.vb</DependentUpon>
     </Compile>
@@ -216,6 +234,15 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Forms\frmAddress.resx">
+      <DependentUpon>frmAddress.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmGuest.resx">
+      <DependentUpon>frmGuest.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSetup.resx">
+      <DependentUpon>frmSetup.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmTransaction.resx">
       <DependentUpon>frmTransaction.vb</DependentUpon>
     </EmbeddedResource>

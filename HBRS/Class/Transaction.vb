@@ -124,26 +124,43 @@
 
 #Region "Procedures"
     Friend Sub SaveTransaction()
-        Dim mysql As String = "Select * From tblTransaction"
+        Dim mysql As String = "Select * From tblTransaction Where ID = '" & _id & "'"
         Dim ds As DataSet = LoadSQL(mysql, "tblTransaction")
-        Dim dsNewRow As DataRow
+        If ds.Tables(0).Rows.Count > 0 Then
+            With ds.Tables(0).Rows(0)
+                .Item("RoomID") = _hotelRoom.ID
+                .Item("ReserveDate") = _reserveDate
+                .Item("CheckInDate") = _checkInDate
+                .Item("CheckOutDate") = _checkOutDate
+                .Item("ChildCount") = _childCount
+                .Item("AdultCount") = _adultCount
+                .Item("CashAdvance") = _cashAdvance
+                .Item("Discount") = _discount
+                .Item("Status") = _status
+                .Item("TotalAmount") = _totalAmount
+            End With
+            SaveEntry(ds)
+        Else
 
-        dsNewRow = ds.Tables("tblTransaction").NewRow
-        With dsNewRow
-            .Item("CustomerID") = _customer.ID
-            .Item("RoomID") = _hotelRoom.ID
-            .Item("ReserveDate") = _reserveDate
-            .Item("CheckInDate") = _checkInDate
-            .Item("CheckOutDate") = _checkOutDate
-            .Item("ChildCount") = _childCount
-            .Item("AdultCount") = _adultCount
-            .Item("CashAdvance") = _cashAdvance
-            .Item("Discount") = _discount
-            .Item("Status") = _status
-            .Item("TotalAmount") = _totalAmount
-        End With
-        ds.Tables("tblTransaction").Rows.Add(dsNewRow)
-        database.SaveEntry(ds, True)
+            Dim dsNewRow As DataRow
+
+            dsNewRow = ds.Tables("tblTransaction").NewRow
+            With dsNewRow
+                .Item("CustomerID") = _customer.ID
+                .Item("RoomID") = _hotelRoom.ID
+                .Item("ReserveDate") = _reserveDate
+                .Item("CheckInDate") = _checkInDate
+                .Item("CheckOutDate") = _checkOutDate
+                .Item("ChildCount") = _childCount
+                .Item("AdultCount") = _adultCount
+                .Item("CashAdvance") = _cashAdvance
+                .Item("Discount") = _discount
+                .Item("Status") = _status
+                .Item("TotalAmount") = _totalAmount
+            End With
+            ds.Tables("tblTransaction").Rows.Add(dsNewRow)
+            SaveEntry(ds, True)
+        End If
     End Sub
 
     Friend Sub LoadTransaction()

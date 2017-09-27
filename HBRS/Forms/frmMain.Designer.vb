@@ -25,19 +25,12 @@ Partial Class frmMain
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.toolbarCheckIn = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton11 = New System.Windows.Forms.ToolStripSeparator()
-        Me.toolbarCheckOut = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator6 = New System.Windows.Forms.ToolStripSeparator()
-        Me.toolbarReserve = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator7 = New System.Windows.Forms.ToolStripSeparator()
-        Me.toolbarRoom = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator8 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripButton10 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator9 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripButton12 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator10 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripButton13 = New System.Windows.Forms.ToolStripButton()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
@@ -66,10 +59,14 @@ Partial Class frmMain
         Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripSeparator()
         Me.RoomStatusToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SettingsToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DiscountToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RoomToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.GuestToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.toolbarCheckIn = New System.Windows.Forms.ToolStripButton()
+        Me.toolbarCheckOut = New System.Windows.Forms.ToolStripButton()
+        Me.toolbarReserve = New System.Windows.Forms.ToolStripButton()
+        Me.toolbarRoom = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripButton10 = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripButton12 = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripButton13 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStrip1.SuspendLayout()
         Me.status.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
@@ -85,105 +82,35 @@ Partial Class frmMain
         Me.ToolStrip1.TabIndex = 14
         Me.ToolStrip1.Text = "ToolStrip1"
         '
-        'toolbarCheckIn
-        '
-        Me.toolbarCheckIn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.toolbarCheckIn.Image = CType(resources.GetObject("toolbarCheckIn.Image"), System.Drawing.Image)
-        Me.toolbarCheckIn.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.toolbarCheckIn.Name = "toolbarCheckIn"
-        Me.toolbarCheckIn.Size = New System.Drawing.Size(36, 36)
-        Me.toolbarCheckIn.Text = "ToolStripButton10"
-        Me.toolbarCheckIn.ToolTipText = "Checkin"
-        '
         'ToolStripButton11
         '
         Me.ToolStripButton11.Name = "ToolStripButton11"
         Me.ToolStripButton11.Size = New System.Drawing.Size(6, 39)
-        '
-        'toolbarCheckOut
-        '
-        Me.toolbarCheckOut.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.toolbarCheckOut.Image = CType(resources.GetObject("toolbarCheckOut.Image"), System.Drawing.Image)
-        Me.toolbarCheckOut.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.toolbarCheckOut.Name = "toolbarCheckOut"
-        Me.toolbarCheckOut.Size = New System.Drawing.Size(36, 36)
-        Me.toolbarCheckOut.Text = "ToolStripButton12"
-        Me.toolbarCheckOut.ToolTipText = "Checkout"
         '
         'ToolStripSeparator6
         '
         Me.ToolStripSeparator6.Name = "ToolStripSeparator6"
         Me.ToolStripSeparator6.Size = New System.Drawing.Size(6, 39)
         '
-        'toolbarReserve
-        '
-        Me.toolbarReserve.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.toolbarReserve.Image = CType(resources.GetObject("toolbarReserve.Image"), System.Drawing.Image)
-        Me.toolbarReserve.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.toolbarReserve.Name = "toolbarReserve"
-        Me.toolbarReserve.Size = New System.Drawing.Size(36, 36)
-        Me.toolbarReserve.Text = "ToolStripButton13"
-        Me.toolbarReserve.ToolTipText = "Reserve"
-        '
         'ToolStripSeparator7
         '
         Me.ToolStripSeparator7.Name = "ToolStripSeparator7"
         Me.ToolStripSeparator7.Size = New System.Drawing.Size(6, 39)
-        '
-        'toolbarRoom
-        '
-        Me.toolbarRoom.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.toolbarRoom.Image = CType(resources.GetObject("toolbarRoom.Image"), System.Drawing.Image)
-        Me.toolbarRoom.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.toolbarRoom.Name = "toolbarRoom"
-        Me.toolbarRoom.Size = New System.Drawing.Size(36, 36)
-        Me.toolbarRoom.Text = "ToolStripButton14"
-        Me.toolbarRoom.ToolTipText = "Room"
         '
         'ToolStripSeparator8
         '
         Me.ToolStripSeparator8.Name = "ToolStripSeparator8"
         Me.ToolStripSeparator8.Size = New System.Drawing.Size(6, 39)
         '
-        'ToolStripButton10
-        '
-        Me.ToolStripButton10.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton10.Image = CType(resources.GetObject("ToolStripButton10.Image"), System.Drawing.Image)
-        Me.ToolStripButton10.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton10.Name = "ToolStripButton10"
-        Me.ToolStripButton10.Size = New System.Drawing.Size(36, 36)
-        Me.ToolStripButton10.Text = "ToolStripButton10"
-        Me.ToolStripButton10.ToolTipText = "Guest"
-        '
         'ToolStripSeparator9
         '
         Me.ToolStripSeparator9.Name = "ToolStripSeparator9"
         Me.ToolStripSeparator9.Size = New System.Drawing.Size(6, 39)
         '
-        'ToolStripButton12
-        '
-        Me.ToolStripButton12.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton12.Image = CType(resources.GetObject("ToolStripButton12.Image"), System.Drawing.Image)
-        Me.ToolStripButton12.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton12.Name = "ToolStripButton12"
-        Me.ToolStripButton12.Size = New System.Drawing.Size(36, 36)
-        Me.ToolStripButton12.Text = "ToolStripButton12"
-        Me.ToolStripButton12.ToolTipText = "Logout"
-        '
         'ToolStripSeparator10
         '
         Me.ToolStripSeparator10.Name = "ToolStripSeparator10"
         Me.ToolStripSeparator10.Size = New System.Drawing.Size(6, 39)
-        '
-        'ToolStripButton13
-        '
-        Me.ToolStripButton13.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton13.Image = CType(resources.GetObject("ToolStripButton13.Image"), System.Drawing.Image)
-        Me.ToolStripButton13.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton13.Name = "ToolStripButton13"
-        Me.ToolStripButton13.Size = New System.Drawing.Size(36, 36)
-        Me.ToolStripButton13.Text = "ToolStripButton13"
-        Me.ToolStripButton13.ToolTipText = "Exit"
         '
         'FileToolStripMenuItem
         '
@@ -365,33 +292,84 @@ Partial Class frmMain
         '
         'SettingsToolStripMenuItem1
         '
-        Me.SettingsToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DiscountToolStripMenuItem, Me.RoomToolStripMenuItem, Me.GuestToolStripMenuItem})
         Me.SettingsToolStripMenuItem1.Name = "SettingsToolStripMenuItem1"
         Me.SettingsToolStripMenuItem1.Size = New System.Drawing.Size(61, 20)
         Me.SettingsToolStripMenuItem1.Text = "&Settings"
-        '
-        'DiscountToolStripMenuItem
-        '
-        Me.DiscountToolStripMenuItem.Name = "DiscountToolStripMenuItem"
-        Me.DiscountToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.DiscountToolStripMenuItem.Text = "&Discount"
-        '
-        'RoomToolStripMenuItem
-        '
-        Me.RoomToolStripMenuItem.Name = "RoomToolStripMenuItem"
-        Me.RoomToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.RoomToolStripMenuItem.Text = "&Room"
-        '
-        'GuestToolStripMenuItem
-        '
-        Me.GuestToolStripMenuItem.Name = "GuestToolStripMenuItem"
-        Me.GuestToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.GuestToolStripMenuItem.Text = "&Guest"
         '
         'Timer1
         '
         Me.Timer1.Enabled = True
         Me.Timer1.Interval = 1000
+        '
+        'toolbarCheckIn
+        '
+        Me.toolbarCheckIn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.toolbarCheckIn.Image = CType(resources.GetObject("toolbarCheckIn.Image"), System.Drawing.Image)
+        Me.toolbarCheckIn.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.toolbarCheckIn.Name = "toolbarCheckIn"
+        Me.toolbarCheckIn.Size = New System.Drawing.Size(36, 36)
+        Me.toolbarCheckIn.Text = "ToolStripButton10"
+        Me.toolbarCheckIn.ToolTipText = "Checkin"
+        '
+        'toolbarCheckOut
+        '
+        Me.toolbarCheckOut.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.toolbarCheckOut.Image = CType(resources.GetObject("toolbarCheckOut.Image"), System.Drawing.Image)
+        Me.toolbarCheckOut.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.toolbarCheckOut.Name = "toolbarCheckOut"
+        Me.toolbarCheckOut.Size = New System.Drawing.Size(36, 36)
+        Me.toolbarCheckOut.Text = "ToolStripButton12"
+        Me.toolbarCheckOut.ToolTipText = "Checkout"
+        '
+        'toolbarReserve
+        '
+        Me.toolbarReserve.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.toolbarReserve.Image = CType(resources.GetObject("toolbarReserve.Image"), System.Drawing.Image)
+        Me.toolbarReserve.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.toolbarReserve.Name = "toolbarReserve"
+        Me.toolbarReserve.Size = New System.Drawing.Size(36, 36)
+        Me.toolbarReserve.Text = "ToolStripButton13"
+        Me.toolbarReserve.ToolTipText = "Reserve"
+        '
+        'toolbarRoom
+        '
+        Me.toolbarRoom.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.toolbarRoom.Image = CType(resources.GetObject("toolbarRoom.Image"), System.Drawing.Image)
+        Me.toolbarRoom.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.toolbarRoom.Name = "toolbarRoom"
+        Me.toolbarRoom.Size = New System.Drawing.Size(36, 36)
+        Me.toolbarRoom.Text = "ToolStripButton14"
+        Me.toolbarRoom.ToolTipText = "Room"
+        '
+        'ToolStripButton10
+        '
+        Me.ToolStripButton10.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton10.Image = CType(resources.GetObject("ToolStripButton10.Image"), System.Drawing.Image)
+        Me.ToolStripButton10.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton10.Name = "ToolStripButton10"
+        Me.ToolStripButton10.Size = New System.Drawing.Size(36, 36)
+        Me.ToolStripButton10.Text = "ToolStripButton10"
+        Me.ToolStripButton10.ToolTipText = "Guest"
+        '
+        'ToolStripButton12
+        '
+        Me.ToolStripButton12.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton12.Image = CType(resources.GetObject("ToolStripButton12.Image"), System.Drawing.Image)
+        Me.ToolStripButton12.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton12.Name = "ToolStripButton12"
+        Me.ToolStripButton12.Size = New System.Drawing.Size(36, 36)
+        Me.ToolStripButton12.Text = "ToolStripButton12"
+        Me.ToolStripButton12.ToolTipText = "Logout"
+        '
+        'ToolStripButton13
+        '
+        Me.ToolStripButton13.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton13.Image = CType(resources.GetObject("ToolStripButton13.Image"), System.Drawing.Image)
+        Me.ToolStripButton13.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton13.Name = "ToolStripButton13"
+        Me.ToolStripButton13.Size = New System.Drawing.Size(36, 36)
+        Me.ToolStripButton13.Text = "ToolStripButton13"
+        Me.ToolStripButton13.ToolTipText = "Exit"
         '
         'frmMain
         '
@@ -457,11 +435,8 @@ Partial Class frmMain
     Friend WithEvents CheckedOutListToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem2 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents RoomStatusToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents DiscountToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripStatusLabel4 As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents ToolStripStatusLabel5 As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents ToolStripStatusLabel6 As System.Windows.Forms.ToolStripStatusLabel
-    Friend WithEvents RoomToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents GuestToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class
