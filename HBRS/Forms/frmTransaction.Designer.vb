@@ -62,7 +62,6 @@ Partial Class frmTransaction
         Me.txtDaysCount = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.rbCheckOut = New System.Windows.Forms.RadioButton()
@@ -89,7 +88,6 @@ Partial Class frmTransaction
         'TabControl1
         '
         Me.TabControl1.Controls.Add(Me.TabPage1)
-        Me.TabControl1.Controls.Add(Me.TabPage3)
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Location = New System.Drawing.Point(6, 6)
         Me.TabControl1.Name = "TabControl1"
@@ -527,16 +525,6 @@ Partial Class frmTransaction
         Me.Label10.TabIndex = 58
         Me.Label10.Text = "No. Of Adults"
         '
-        'TabPage3
-        '
-        Me.TabPage3.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage3.Size = New System.Drawing.Size(674, 320)
-        Me.TabPage3.TabIndex = 2
-        Me.TabPage3.Text = "Check Out Form"
-        Me.TabPage3.UseVisualStyleBackColor = True
-        '
         'TabPage2
         '
         Me.TabPage2.Controls.Add(Me.GroupBox3)
@@ -739,5 +727,4 @@ Partial Class frmTransaction
     Friend WithEvents ColumnHeader4 As System.Windows.Forms.ColumnHeader
     Friend WithEvents ColumnHeader5 As System.Windows.Forms.ColumnHeader
     Friend WithEvents ColumnHeader6 As System.Windows.Forms.ColumnHeader
-    Friend WithEvents TabPage3 As System.Windows.Forms.TabPage
 End Class

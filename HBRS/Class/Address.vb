@@ -85,7 +85,7 @@
 
 #Region "Procedures"
     Friend Sub SaveAddress()
-        Dim mysql As String = "Select * From tblAddress"
+        Dim mysql As String = "Select * From tblAddress Where ID = " & _id
         Dim ds As DataSet = LoadSQL(mysql, "tblAddress")
         Dim dsNewRow As DataRow
 

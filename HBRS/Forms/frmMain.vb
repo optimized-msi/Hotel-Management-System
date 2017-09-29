@@ -104,4 +104,8 @@
     Private Sub SettingsToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SettingsToolStripMenuItem1.Click
         frmSetup.Show()
     End Sub
+
+    Private Sub ToolStripButton10_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripButton10.Click
+        frmGuest.Show()
+    End Sub
 End Class

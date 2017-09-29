@@ -3,19 +3,28 @@
     Private HotelRoom As Room
     Private HotelTransaction As Transaction
 
+    Private Function isTransactionValid()
+        If HotelGuest Is Nothing Then Return False
+        If HotelRoom Is Nothing Then Return False
+        If txtAdults.Text < 1 Then Return False
+
+
+        Return True
+    End Function
+
     Private Sub btnCheckIn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCheckIn.Click
         HotelTransaction = New Transaction
         With HotelTransaction
             .Customer = HotelGuest
             .Room = HotelRoom
-            .ReserveDate = ""
+            .ReserveDate = Nothing
             .CheckInDate = dtpCheckIn.Value
             .CheckOutDate = dtpCheckOut.Value
             .ChildCount = txtChildren.Text
             .AdultCount = txtAdults.Text
             .CashAdvance = txtAdvance.Text
             .Discount = cboDiscount.Text
-            .Status = ""
+            .Status = 1
             .TotalAmount = ""
             .SaveTransaction()
         End With
@@ -138,10 +147,6 @@
     Private Sub frmTransaction_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         ClearListView()
         ClearTextCheckIn()
-    End Sub
-
-    Private Sub btnSearch_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSearch.Click
-
     End Sub
 
     Private Sub dtpCheckIn_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles dtpCheckIn.ValueChanged

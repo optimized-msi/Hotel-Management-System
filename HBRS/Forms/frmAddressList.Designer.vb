@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmAddress
+Partial Class frmAddressList
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -98,14 +98,14 @@ Partial Class frmAddress
         Me.ColumnHeader5.Text = "City"
         Me.ColumnHeader5.Width = 212
         '
-        'frmAddress
+        'frmAddressList
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(745, 423)
         Me.Controls.Add(Me.lvAddress)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Name = "frmAddress"
+        Me.Name = "frmAddressList"
         Me.Text = "Address List"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()

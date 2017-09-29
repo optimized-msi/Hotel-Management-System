@@ -179,6 +179,7 @@ Partial Class frmGuest
         '
         Me.txtProvince.Location = New System.Drawing.Point(104, 250)
         Me.txtProvince.Name = "txtProvince"
+        Me.txtProvince.ReadOnly = True
         Me.txtProvince.Size = New System.Drawing.Size(216, 20)
         Me.txtProvince.TabIndex = 16
         Me.txtProvince.Text = "SOUTH COTABATO"
@@ -187,6 +188,7 @@ Partial Class frmGuest
         '
         Me.txtBarangay.Location = New System.Drawing.Point(104, 281)
         Me.txtBarangay.Name = "txtBarangay"
+        Me.txtBarangay.ReadOnly = True
         Me.txtBarangay.Size = New System.Drawing.Size(216, 20)
         Me.txtBarangay.TabIndex = 17
         Me.txtBarangay.Text = "DI MAKITA"
@@ -195,6 +197,7 @@ Partial Class frmGuest
         '
         Me.txtSreet.Location = New System.Drawing.Point(104, 318)
         Me.txtSreet.Name = "txtSreet"
+        Me.txtSreet.ReadOnly = True
         Me.txtSreet.Size = New System.Drawing.Size(216, 20)
         Me.txtSreet.TabIndex = 18
         Me.txtSreet.Text = "PUROK HANAP"

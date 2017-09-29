@@ -5,8 +5,8 @@
     Private Sub btnBrowseAddress_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBrowseAddress.Click
         Dim secured_str As String = txtCity.Text
         secured_str = DreadKnight(secured_str)
-        frmGuestList.SearchSelect(secured_str, FormName.Transaction)
-        frmGuestList.Show()
+        frmAddressList.SearchSelect(secured_str, FormName.Address)
+        frmAddressList.Show()
     End Sub
 
     Private Sub frmGuest_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
@@ -59,5 +59,11 @@
         txtBarangay.Clear()
         txtProvince.Clear()
         txtSreet.Clear()
+    End Sub
+
+    Private Sub txtCity_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtCity.KeyPress
+        If isEnter(e) Then
+            btnBrowseAddress.Show()
+        End If
     End Sub
 End Class

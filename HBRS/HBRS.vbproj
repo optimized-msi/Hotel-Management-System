@@ -84,10 +84,10 @@
     <Compile Include="Class\Guest.vb" />
     <Compile Include="Class\Room.vb" />
     <Compile Include="Class\Transaction.vb" />
-    <Compile Include="Forms\frmAddress.Designer.vb">
-      <DependentUpon>frmAddress.vb</DependentUpon>
+    <Compile Include="Forms\frmAddressList.Designer.vb">
+      <DependentUpon>frmAddressList.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmAddress.vb">
+    <Compile Include="Forms\frmAddressList.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\frmGuest.Designer.vb">
@@ -234,8 +234,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms\frmAddress.resx">
-      <DependentUpon>frmAddress.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\frmAddressList.resx">
+      <DependentUpon>frmAddressList.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmGuest.resx">
       <DependentUpon>frmGuest.vb</DependentUpon>

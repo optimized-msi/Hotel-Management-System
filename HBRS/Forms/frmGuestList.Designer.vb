@@ -30,12 +30,15 @@ Partial Class frmGuestList
         Me.btnSearch = New System.Windows.Forms.Button()
         Me.txtSearch = New System.Windows.Forms.TextBox()
         Me.btnAdd = New System.Windows.Forms.Button()
+        Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader5 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader6 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'lvGuest
         '
-        Me.lvGuest.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3})
+        Me.lvGuest.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader6})
         Me.lvGuest.FullRowSelect = True
         Me.lvGuest.GridLines = True
         Me.lvGuest.Location = New System.Drawing.Point(12, 62)
@@ -48,18 +51,18 @@ Partial Class frmGuestList
         'ColumnHeader1
         '
         Me.ColumnHeader1.Text = "ID"
-        Me.ColumnHeader1.Width = 39
+        Me.ColumnHeader1.Width = 31
         '
         'ColumnHeader2
         '
         Me.ColumnHeader2.Text = "Full Name"
         Me.ColumnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.ColumnHeader2.Width = 228
+        Me.ColumnHeader2.Width = 145
         '
         'ColumnHeader3
         '
-        Me.ColumnHeader3.Text = "Address"
-        Me.ColumnHeader3.Width = 331
+        Me.ColumnHeader3.Text = "City"
+        Me.ColumnHeader3.Width = 143
         '
         'GroupBox1
         '
@@ -97,6 +100,21 @@ Partial Class frmGuestList
         Me.btnAdd.Text = "&Add"
         Me.btnAdd.UseVisualStyleBackColor = True
         '
+        'ColumnHeader4
+        '
+        Me.ColumnHeader4.Text = "Province"
+        Me.ColumnHeader4.Width = 128
+        '
+        'ColumnHeader5
+        '
+        Me.ColumnHeader5.Text = "Barangay"
+        Me.ColumnHeader5.Width = 118
+        '
+        'ColumnHeader6
+        '
+        Me.ColumnHeader6.Text = "Street"
+        Me.ColumnHeader6.Width = 145
+        '
         'frmGuestList
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -121,4 +139,7 @@ Partial Class frmGuestList
     Friend WithEvents txtSearch As System.Windows.Forms.TextBox
     Friend WithEvents ColumnHeader3 As System.Windows.Forms.ColumnHeader
     Friend WithEvents btnAdd As System.Windows.Forms.Button
+    Friend WithEvents ColumnHeader4 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents ColumnHeader5 As System.Windows.Forms.ColumnHeader
+    Friend WithEvents ColumnHeader6 As System.Windows.Forms.ColumnHeader
 End Class

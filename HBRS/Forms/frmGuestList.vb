@@ -15,7 +15,7 @@
 
         If str <> "" Then
             mySql = "Select C.ID, C.FirstName, C.MiddleName, C.Lastname, "
-            mySql &= "A.City || ' ' || A.Province || ' ' || A.Barangay || ' ' || A.Subdivision || ' ' || A.Purok || ' ' || A.Street as Address "
+            mySql &= "A.City, A.Province,  A.Barangay, A.Street  "
             mySql &= "From tblCustomer C "
             mySql &= "Inner Join tblAddress A On A.ID = C.AddressID "
 
@@ -30,7 +30,7 @@
             Next
         Else
             mySql = "Select First 10 C.ID, C.FirstName, C.MiddleName, C.LastName, "
-            mySql &= "A.City || ' ' || A.Province || ' ' ||  A.Barangay || ' ' || A.Subdivision || ' ' || A.Purok || ' '|| A.Street as Address "
+            mySql &= "A.City, A.Province, A.Barangay, A.Street "
             mySql &= "From tblCustomer C "
             mySql &= "Inner Join tblAddress A On A.ID = C.AddressID "
         End If
@@ -46,7 +46,10 @@
         Dim lv As ListViewItem = lvGuest.Items.Add(dr.Item("ID"))
         With dr
             lv.SubItems.Add(.Item("FirstName") & " " & .Item("LastName"))
-            lv.SubItems.Add(.Item("Address"))
+            lv.SubItems.Add(.Item("City").ToString)
+            lv.SubItems.Add(.Item("Province").ToString)
+            lv.SubItems.Add(.Item("Barangay").ToString)
+            lv.SubItems.Add(.Item("Street").ToString)
         End With
     End Sub
 

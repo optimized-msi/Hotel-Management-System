@@ -1,11 +1,7 @@
-﻿Public Class frmAddress
+﻿Public Class frmAddressList
     Dim fromOtherForm As Boolean = False
     Friend GetAddress As Address
     Dim frmOrig As formSwitch.FormName
-
-    Private Sub frmAddress_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        LoadAddress()
-    End Sub
 
     Private Sub LoadAddress(Optional ByVal str As String = "")
         Dim secured_str As String = str
@@ -19,16 +15,18 @@
         End If
         Dim ds As DataSet = LoadSQL(mysql, "tblAddress")
 
-
+        For Each dr In ds.Tables(0).Rows
+            AddItem(dr)
+        Next
     End Sub
 
     Private Sub AddItem(ByVal dr As DataRow)
         Dim lv As ListViewItem = lvAddress.Items.Add(dr.Item("ID"))
         With dr
-            lv.SubItems.Add(.Item("Street"))
-            lv.SubItems.Add(.Item("Barangay"))
-            lv.SubItems.Add(.Item("Province"))
-            lv.SubItems.Add(.Item("City"))
+            lv.SubItems.Add(.Item("Street").ToString)
+            lv.SubItems.Add(.Item("Barangay").ToString)
+            lv.SubItems.Add(.Item("Province").ToString)
+            lv.SubItems.Add(.Item("City").ToString)
         End With
 
     End Sub
@@ -57,4 +55,7 @@
         frmOrig = frmOrigin
     End Sub
 
+    Private Sub frmAddressList_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        LoadAddress()
+    End Sub
 End Class
