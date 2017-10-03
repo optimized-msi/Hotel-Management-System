@@ -50,7 +50,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DeathCodez">
-      <HintPath>..\..\PCOM\PCOM-POS-SYSTEM\POS\POS\DeathCodez.dll</HintPath>
+      <HintPath>.\DeathCodez.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
       <EmbedInteropTypes>True</EmbedInteropTypes>
@@ -80,10 +80,32 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\frmCheckin.Designer.vb">
-      <DependentUpon>frmCheckin.vb</DependentUpon>
+    <Compile Include="Class\Address.vb" />
+    <Compile Include="Class\Guest.vb" />
+    <Compile Include="Class\Room.vb" />
+    <Compile Include="Class\Transaction.vb" />
+    <Compile Include="Forms\frmAddress.Designer.vb">
+      <DependentUpon>frmAddress.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmCheckin.vb">
+    <Compile Include="Forms\frmAddress.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmGuest.Designer.vb">
+      <DependentUpon>frmGuest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmGuest.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSetup.Designer.vb">
+      <DependentUpon>frmSetup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSetup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTransaction.Designer.vb">
+      <DependentUpon>frmTransaction.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTransaction.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\frmCheckinList.Designer.vb">
@@ -116,12 +138,6 @@
     <Compile Include="Forms\frmDiscount.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmGuest.Designer.vb">
-      <DependentUpon>frmGuest.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\frmGuest.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Forms\frmMain.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -147,25 +163,20 @@
     <Compile Include="Forms\frmRoom.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmRoomListMonitor.Designer.vb">
-      <DependentUpon>frmRoomListMonitor.vb</DependentUpon>
+    <Compile Include="Forms\frmRoomList.Designer.vb">
+      <DependentUpon>frmRoomList.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmRoomListMonitor.vb">
+    <Compile Include="Forms\frmRoomList.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmSelectGuest.Designer.vb">
-      <DependentUpon>frmSelectGuest.vb</DependentUpon>
+    <Compile Include="Forms\frmGuestList.Designer.vb">
+      <DependentUpon>frmGuestList.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmSelectGuest.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\frmSelectRoom.Designer.vb">
-      <DependentUpon>frmSelectRoom.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\frmSelectRoom.vb">
+    <Compile Include="Forms\frmGuestList.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Modules\database.vb" />
+    <Compile Include="Modules\formSwitch.vb" />
     <Compile Include="Modules\module.vb" />
     <Compile Include="Modules\mod_system.vb" />
     <Compile Include="Modules\security.vb" />
@@ -223,8 +234,17 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms\frmCheckin.resx">
-      <DependentUpon>frmCheckin.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\frmAddress.resx">
+      <DependentUpon>frmAddress.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmGuest.resx">
+      <DependentUpon>frmGuest.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSetup.resx">
+      <DependentUpon>frmSetup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTransaction.resx">
+      <DependentUpon>frmTransaction.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmCheckinList.resx">
       <DependentUpon>frmCheckinList.vb</DependentUpon>
@@ -241,9 +261,6 @@
     <EmbeddedResource Include="Forms\frmDiscount.resx">
       <DependentUpon>frmDiscount.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmGuest.resx">
-      <DependentUpon>frmGuest.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmMain.resx">
       <DependentUpon>frmMain.vb</DependentUpon>
     </EmbeddedResource>
@@ -256,14 +273,11 @@
     <EmbeddedResource Include="Forms\frmRoom.resx">
       <DependentUpon>frmRoom.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmRoomListMonitor.resx">
-      <DependentUpon>frmRoomListMonitor.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\frmRoomList.resx">
+      <DependentUpon>frmRoomList.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmSelectGuest.resx">
-      <DependentUpon>frmSelectGuest.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmSelectRoom.resx">
-      <DependentUpon>frmSelectRoom.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\frmGuestList.resx">
+      <DependentUpon>frmGuestList.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -301,9 +315,7 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Class\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

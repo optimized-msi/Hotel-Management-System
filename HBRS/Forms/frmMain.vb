@@ -14,7 +14,7 @@
     End Sub
 
     Private Sub toolbarCheckIn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles toolbarCheckIn.Click
-        frmCheckin.ShowDialog()
+        frmTransaction.ShowDialog()
     End Sub
 
     Private Sub ToolStripButton13_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripButton13.Click
@@ -31,10 +31,6 @@
         End If
     End Sub
 
-    Private Sub ToolStripButton10_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripButton10.Click
-        frmGuest.ShowDialog()
-    End Sub
-
     Private Sub toolbarRoom_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles toolbarRoom.Click
         frmRoom.ShowDialog()
     End Sub
@@ -44,7 +40,7 @@
     End Sub
 
     Private Sub NewCheckInToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewCheckInToolStripMenuItem.Click
-        frmCheckin.ShowDialog()
+        frmTransaction.ShowDialog()
     End Sub
 
     Private Sub NewReservationToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewReservationToolStripMenuItem.Click
@@ -80,7 +76,7 @@
     End Sub
 
     Private Sub RoomStatusToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RoomStatusToolStripMenuItem.Click
-        frmRoomListMonitor.ShowDialog()
+        frmRoomList.ShowDialog()
     End Sub
 
     Private Sub ReservedListToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ReservedListToolStripMenuItem.Click
@@ -96,16 +92,16 @@
         status.Items(2).Text = "Date and Time : " & datenow.ToString("MMMM dd, yyyy") & " " & TimeOfDay
     End Sub
 
-    Private Sub DiscountToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DiscountToolStripMenuItem.Click
+    Private Sub DiscountToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         frmDiscount.ShowDialog()
     End Sub
 
-    Private Sub RoomToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RoomToolStripMenuItem.Click
+    Private Sub RoomToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         frmRoom.ShowDialog()
         frmRoom.TabPage2.Select()
     End Sub
 
-    Private Sub GuestToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles GuestToolStripMenuItem.Click
-        frmGuest.ShowDialog()
+    Private Sub SettingsToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SettingsToolStripMenuItem1.Click
+        frmSetup.Show()
     End Sub
 End Class
