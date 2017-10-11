@@ -55,7 +55,7 @@ namespace OrderSystem
         }
 
         //Save to database
-        private string fillData = "TBLMAINTENANCE";
+        private string fillData = "tblUser";
         public void CreateAdministrator(string pass = "misAdmin2016")
         {
             string mySql;

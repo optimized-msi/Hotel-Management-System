@@ -9,19 +9,20 @@ using System.Windows.Forms;
 using System.Linq;
 using System.Xml.Linq;
 using System.Data.Odbc;
-
+using MySql.Data.MySqlClient;
 
 namespace OrderSystem
 {
     class Database
     {
 
-        public static OdbcConnection con;
-        public static OdbcConnection ReaderCon;
+        public static MySqlConnection con;
+        public static MySqlConnection ReaderCon;
         //Final
-        static internal string dbName = "MOCPPOS.FDB";
-        static internal string fbUser = "SYSDBA";
-        static internal string fbPass = "masterkey";
+        static internal string dbName = "os";
+        static internal string uid = "root";
+        static internal string fbPass = "''";
+        static internal string server = "localhost";
         static internal DataSet fbDataSet = new DataSet();
 
         static internal string conStr = string.Empty;
@@ -37,9 +38,10 @@ namespace OrderSystem
         /// <remarks></remarks>
         public static void dbOpen()
         {
-            conStr = "DRIVER=Firebird/InterBase(r) driver;User=" + fbUser + ";Password=" + fbPass + ";Database=" + dbName + ";";
+            conStr = "SERVER=" + server + ";" + "DATABASE=" +
+        dbName + ";" + "UID=" + uid + ";" + "PASSWORD=" + fbPass + ";";
 
-            con = new OdbcConnection(conStr);
+            con = new MySqlConnection(conStr);
             try
             {
                 con.Open();
@@ -102,7 +104,7 @@ namespace OrderSystem
 
             dbOpen();
 
-            OdbcDataAdapter da = null;
+            MySqlDataAdapter da = null;
             DataSet ds = new DataSet();
             string mySql = null;
             string fillData = null;
@@ -122,8 +124,8 @@ namespace OrderSystem
                    Console.WriteLine("ModifySQL: " + mySql);
                 }
 
-                da = new OdbcDataAdapter(mySql, con);   
-                OdbcCommandBuilder cb = new OdbcCommandBuilder(da);
+                da = new MySqlDataAdapter(mySql, con);
+                MySqlCommandBuilder cb = new MySqlCommandBuilder(da);
                 //Required in Saving/Update to Database
                 da.Update(ds, fillData);
             }
@@ -134,11 +136,12 @@ namespace OrderSystem
 
         static internal void SQLCommand(string sql)
         {
-            conStr = "DRIVER=Firebird/InterBase(r) driver;User=" + fbUser + ";Password=" + fbPass + ";Database=" + dbName + ";";
-            con = new OdbcConnection(conStr);
+            conStr = "SERVER=" + server + ";" + "DATABASE=" +
+         dbName + ";" + "UID=" + uid + ";" + "PASSWORD=" + fbPass + ";";
+            con = new MySqlConnection(conStr);
 
-            OdbcCommand cmd = null;
-            cmd = new OdbcCommand(sql, con);
+            MySqlCommand cmd = null;
+            cmd = new MySqlCommand(sql, con);
 
             try
             {
@@ -191,12 +194,12 @@ namespace OrderSystem
             dbOpen();
             //open the database.
 
-            OdbcDataAdapter da = null;
+            MySqlDataAdapter da = null;
             DataSet ds = new DataSet();
             string fillData = tblName;
             try
             {
-                da = new OdbcDataAdapter(mySql, con);
+                da = new MySqlDataAdapter(mySql, con);
                 da.Fill(ds, fillData);
             }
             catch (Exception ex)
@@ -218,10 +221,10 @@ namespace OrderSystem
         /// <param name="mySql">mysql where the data pass</param>
         /// <returns></returns>
         /// <remarks></remarks>
-        static internal OdbcDataReader LoadSQL_byDataReader(string mySql)
+        static internal MySqlDataReader LoadSQL_byDataReader(string mySql)
         {
-            OdbcCommand myCom = new OdbcCommand(mySql, ReaderCon);
-            OdbcDataReader reader = myCom.ExecuteReader();
+            MySqlCommand myCom = new MySqlCommand(mySql, ReaderCon);
+            MySqlDataReader reader = myCom.ExecuteReader();
 
             return reader;
         }
@@ -231,9 +234,10 @@ namespace OrderSystem
         /// <remarks></remarks>
         public static void dbReaderOpen()
         {
-            conStr = "DRIVER=Firebird/InterBase(r) driver;User=" + fbUser + ";Password=" + fbPass + ";Database=" + dbName + ";";
+            conStr = "SERVER=" + server + ";" + "DATABASE=" +
+        dbName + ";" + "UID=" + uid + ";" + "PASSWORD=" + fbPass + ";";
 
-            ReaderCon = new OdbcConnection(conStr);
+            ReaderCon = new MySqlConnection(conStr);
             try
             {
                 ReaderCon.Open();
@@ -242,7 +246,7 @@ namespace OrderSystem
             catch (Exception ex)
             {
                 ReaderCon.Dispose();
-               // Interaction.MsgBox(language[0] + vbCrLf + ex.Message.ToString(), Constants.vbCritical, "Connecting Error");
+             MessageBox.Show(ex.Message);
                // Log_Report(ex.Message.ToString());
                 return;
             }
