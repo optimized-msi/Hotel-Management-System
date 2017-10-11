@@ -71,7 +71,7 @@
 
             Next
         Else
-            mySql = ""
+            mySql = "Select * From tblTransaction "
         End If
         Dim ds As DataSet = LoadSQL(mySql, "tblTransaction")
 
