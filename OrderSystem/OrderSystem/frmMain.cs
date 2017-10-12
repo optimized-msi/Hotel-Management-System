@@ -51,7 +51,7 @@ namespace OrderSystem
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            CreateAdministrator();
+            //CreateAdministrator();
         }
 
         //Save to database

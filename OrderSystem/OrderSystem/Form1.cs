@@ -23,11 +23,11 @@ namespace SendingSMS
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            ComPort.Items.Add("COM1");
-            ComPort.Items.Add("COM2");
-            ComPort.Items.Add("COM3");
-            ComPort.Items.Add("COM4");
-            ComPort.Items.Add("COM5");
+            //ComPort.Items.Add("COM1");
+            //ComPort.Items.Add("COM2");
+            //ComPort.Items.Add("COM3");
+            //ComPort.Items.Add("COM4");
+            //ComPort.Items.Add("COM5");
         }
 
         private void CntBtn_Click(object sender, EventArgs e)

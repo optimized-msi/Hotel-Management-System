@@ -80,6 +80,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class\MenuItem.cs" />
     <Compile Include="Database.cs" />
     <Compile Include="dsReport.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -186,7 +187,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Class\" />
     <Folder Include="Module\" />
     <Folder Include="Reports\" />
   </ItemGroup>

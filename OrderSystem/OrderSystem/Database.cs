@@ -20,9 +20,9 @@ namespace OrderSystem
         public static MySqlConnection ReaderCon;
         //Final
         static internal string dbName = "os";
-        static internal string uid = "root";
-        static internal string fbPass = "''";
-        static internal string server = "localhost";
+        static internal string uid = "blade";
+        static internal string fbPass = "blade";
+        static internal string server = "BLADE";
         static internal DataSet fbDataSet = new DataSet();
 
         static internal string conStr = string.Empty;
@@ -38,7 +38,7 @@ namespace OrderSystem
         /// <remarks></remarks>
         public static void dbOpen()
         {
-            conStr = "SERVER=" + server + ";" + "DATABASE=" +
+            conStr = "SERVER=" + server + ";PORT=3306;" + "DATABASE=" +
         dbName + ";" + "UID=" + uid + ";" + "PASSWORD=" + fbPass + ";";
 
             con = new MySqlConnection(conStr);
