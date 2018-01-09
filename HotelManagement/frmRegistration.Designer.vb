@@ -60,14 +60,14 @@ Partial Class frmRegistration
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
-        Me.Label21 = New System.Windows.Forms.Label()
-        Me.Label22 = New System.Windows.Forms.Label()
-        Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.DateTimePicker3 = New System.Windows.Forms.DateTimePicker()
         Me.Label23 = New System.Windows.Forms.Label()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.Label24 = New System.Windows.Forms.Label()
+        Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
+        Me.Label21 = New System.Windows.Forms.Label()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.Label25 = New System.Windows.Forms.Label()
         Me.CheckBox2 = New System.Windows.Forms.CheckBox()
@@ -77,6 +77,10 @@ Partial Class frmRegistration
         Me.Label27 = New System.Windows.Forms.Label()
         Me.DateTimePicker5 = New System.Windows.Forms.DateTimePicker()
         Me.Label28 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -309,7 +313,7 @@ Partial Class frmRegistration
         '
         Me.ComboBox4.BackColor = System.Drawing.SystemColors.InactiveCaption
         Me.ComboBox4.FormattingEnabled = True
-        Me.ComboBox4.Items.AddRange(New Object() {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91", "92", "93", "94", "95", "96", "97", "98", "99", "100", "101", "102", "103", "104", "105", "106", "107", "108", "109", "110", "111", "112", "113", "114", "115", "116", "117", "118", "119", "120", "121", "122", "123", "124", "125", "126", "127", "128", "129", "130", "131", "132", "133", "134", "135", "136", "137", "138", "139", "140", "141", "142", "143", "144", "145", "146", "147", "148", "149", "150"})
+        Me.ComboBox4.Items.AddRange(New Object() {"Male", "Female"})
         Me.ComboBox4.Location = New System.Drawing.Point(402, 169)
         Me.ComboBox4.Name = "ComboBox4"
         Me.ComboBox4.Size = New System.Drawing.Size(107, 23)
@@ -496,39 +500,24 @@ Partial Class frmRegistration
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Rate Info"
         '
-        'DateTimePicker2
+        'Label24
         '
-        Me.DateTimePicker2.CustomFormat = "MM/dd/yyyy h:mm:ss tt"
-        Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.DateTimePicker2.Location = New System.Drawing.Point(96, 16)
-        Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(220, 21)
-        Me.DateTimePicker2.TabIndex = 24
+        Me.Label24.AutoSize = True
+        Me.Label24.ForeColor = System.Drawing.Color.Red
+        Me.Label24.Location = New System.Drawing.Point(7, 100)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(81, 15)
+        Me.Label24.TabIndex = 30
+        Me.Label24.Text = "Confidential  :"
         '
-        'Label21
+        'CheckBox1
         '
-        Me.Label21.AutoSize = True
-        Me.Label21.Location = New System.Drawing.Point(32, 18)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(57, 15)
-        Me.Label21.TabIndex = 23
-        Me.Label21.Text = "Time In  :"
-        '
-        'Label22
-        '
-        Me.Label22.AutoSize = True
-        Me.Label22.Location = New System.Drawing.Point(38, 44)
-        Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(49, 15)
-        Me.Label22.TabIndex = 25
-        Me.Label22.Text = "Arrival  :"
-        '
-        'NumericUpDown1
-        '
-        Me.NumericUpDown1.Location = New System.Drawing.Point(97, 43)
-        Me.NumericUpDown1.Name = "NumericUpDown1"
-        Me.NumericUpDown1.Size = New System.Drawing.Size(75, 21)
-        Me.NumericUpDown1.TabIndex = 26
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Location = New System.Drawing.Point(98, 102)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox1.TabIndex = 29
+        Me.CheckBox1.UseVisualStyleBackColor = True
         '
         'DateTimePicker3
         '
@@ -548,24 +537,39 @@ Partial Class frmRegistration
         Me.Label23.TabIndex = 27
         Me.Label23.Text = "Time Out  :"
         '
-        'CheckBox1
+        'NumericUpDown1
         '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(98, 102)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox1.TabIndex = 29
-        Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.NumericUpDown1.Location = New System.Drawing.Point(97, 43)
+        Me.NumericUpDown1.Name = "NumericUpDown1"
+        Me.NumericUpDown1.Size = New System.Drawing.Size(75, 21)
+        Me.NumericUpDown1.TabIndex = 26
         '
-        'Label24
+        'Label22
         '
-        Me.Label24.AutoSize = True
-        Me.Label24.ForeColor = System.Drawing.Color.Red
-        Me.Label24.Location = New System.Drawing.Point(7, 100)
-        Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(81, 15)
-        Me.Label24.TabIndex = 30
-        Me.Label24.Text = "Confidential  :"
+        Me.Label22.AutoSize = True
+        Me.Label22.Location = New System.Drawing.Point(38, 44)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(49, 15)
+        Me.Label22.TabIndex = 25
+        Me.Label22.Text = "Arrival  :"
+        '
+        'DateTimePicker2
+        '
+        Me.DateTimePicker2.CustomFormat = "MM/dd/yyyy h:mm:ss tt"
+        Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.DateTimePicker2.Location = New System.Drawing.Point(96, 16)
+        Me.DateTimePicker2.Name = "DateTimePicker2"
+        Me.DateTimePicker2.Size = New System.Drawing.Size(220, 21)
+        Me.DateTimePicker2.TabIndex = 24
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Location = New System.Drawing.Point(32, 18)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(57, 15)
+        Me.Label21.TabIndex = 23
+        Me.Label21.Text = "Time In  :"
         '
         'GroupBox3
         '
@@ -656,12 +660,52 @@ Partial Class frmRegistration
         Me.Label28.TabIndex = 23
         Me.Label28.Text = "Time In  :"
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(1100, 450)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 32
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(1019, 450)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 33
+        Me.Button2.Text = "Button2"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(938, 450)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(75, 23)
+        Me.Button3.TabIndex = 34
+        Me.Button3.Text = "Button3"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(857, 450)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(75, 23)
+        Me.Button4.TabIndex = 35
+        Me.Button4.Text = "Button4"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
         'frmRegistration
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1184, 485)
+        Me.Controls.Add(Me.Button4)
+        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
@@ -746,4 +790,8 @@ Partial Class frmRegistration
     Friend WithEvents Label27 As System.Windows.Forms.Label
     Friend WithEvents DateTimePicker5 As System.Windows.Forms.DateTimePicker
     Friend WithEvents Label28 As System.Windows.Forms.Label
+    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents Button4 As System.Windows.Forms.Button
 End Class
