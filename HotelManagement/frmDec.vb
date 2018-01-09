@@ -12,5 +12,6 @@
             Win32.FreeConsole()
         End If
         Win32.FreeConsole()
+
     End Sub
 End Class
