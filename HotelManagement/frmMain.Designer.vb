@@ -27,12 +27,12 @@ Partial Class frmMain
         Me.ToolStripStatusLabel5 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel6 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.status.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -52,7 +52,7 @@ Partial Class frmMain
         Me.ToolStripStatusLabel4.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.ToolStripStatusLabel4.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Right
         Me.ToolStripStatusLabel4.Name = "ToolStripStatusLabel4"
-        Me.ToolStripStatusLabel4.Size = New System.Drawing.Size(398, 17)
+        Me.ToolStripStatusLabel4.Size = New System.Drawing.Size(430, 17)
         Me.ToolStripStatusLabel4.Spring = True
         Me.ToolStripStatusLabel4.Text = "Login as :"
         '
@@ -61,7 +61,7 @@ Partial Class frmMain
         Me.ToolStripStatusLabel5.AutoSize = False
         Me.ToolStripStatusLabel5.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.ToolStripStatusLabel5.Name = "ToolStripStatusLabel5"
-        Me.ToolStripStatusLabel5.Size = New System.Drawing.Size(398, 17)
+        Me.ToolStripStatusLabel5.Size = New System.Drawing.Size(430, 17)
         Me.ToolStripStatusLabel5.Spring = True
         Me.ToolStripStatusLabel5.Text = "Hotel Management System"
         '
@@ -71,7 +71,7 @@ Partial Class frmMain
         Me.ToolStripStatusLabel6.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.ToolStripStatusLabel6.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Left
         Me.ToolStripStatusLabel6.Name = "ToolStripStatusLabel6"
-        Me.ToolStripStatusLabel6.Size = New System.Drawing.Size(398, 17)
+        Me.ToolStripStatusLabel6.Size = New System.Drawing.Size(430, 17)
         Me.ToolStripStatusLabel6.Spring = True
         Me.ToolStripStatusLabel6.Text = "Date and Time :"
         '
@@ -92,57 +92,18 @@ Partial Class frmMain
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "ROOM STATUS"
         '
-        'Button1
+        'Button6
         '
-        Me.Button1.BackColor = System.Drawing.SystemColors.HighlightText
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Button1.Location = New System.Drawing.Point(179, 14)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(123, 59)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Available"
-        Me.Button1.UseVisualStyleBackColor = False
-        '
-        'Button2
-        '
-        Me.Button2.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(308, 14)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(123, 59)
-        Me.Button2.TabIndex = 1
-        Me.Button2.Text = "Occupied"
-        Me.Button2.UseVisualStyleBackColor = False
-        '
-        'Button3
-        '
-        Me.Button3.BackColor = System.Drawing.Color.Yellow
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Button3.Location = New System.Drawing.Point(437, 14)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(150, 59)
-        Me.Button3.TabIndex = 2
-        Me.Button3.Text = "For Checkout"
-        Me.Button3.UseVisualStyleBackColor = False
-        '
-        'Button4
-        '
-        Me.Button4.BackColor = System.Drawing.Color.Red
-        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.ForeColor = System.Drawing.Color.White
-        Me.Button4.Location = New System.Drawing.Point(593, 14)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(123, 59)
-        Me.Button4.TabIndex = 3
-        Me.Button4.Text = "Out of Order"
-        Me.Button4.UseVisualStyleBackColor = False
+        Me.Button6.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button6.ForeColor = System.Drawing.Color.White
+        Me.Button6.Location = New System.Drawing.Point(851, 14)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(123, 59)
+        Me.Button6.TabIndex = 5
+        Me.Button6.Text = "Confidential"
+        Me.Button6.UseVisualStyleBackColor = False
         '
         'Button5
         '
@@ -157,18 +118,57 @@ Partial Class frmMain
         Me.Button5.Text = "Reservation"
         Me.Button5.UseVisualStyleBackColor = False
         '
-        'Button6
+        'Button4
         '
-        Me.Button6.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button6.ForeColor = System.Drawing.Color.White
-        Me.Button6.Location = New System.Drawing.Point(851, 14)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(123, 59)
-        Me.Button6.TabIndex = 5
-        Me.Button6.Text = "Confidential"
-        Me.Button6.UseVisualStyleBackColor = False
+        Me.Button4.BackColor = System.Drawing.Color.Red
+        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button4.ForeColor = System.Drawing.Color.White
+        Me.Button4.Location = New System.Drawing.Point(593, 14)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(123, 59)
+        Me.Button4.TabIndex = 3
+        Me.Button4.Text = "Out of Order"
+        Me.Button4.UseVisualStyleBackColor = False
+        '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.Color.Yellow
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Button3.Location = New System.Drawing.Point(437, 14)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(150, 59)
+        Me.Button3.TabIndex = 2
+        Me.Button3.Text = "For Checkout"
+        Me.Button3.UseVisualStyleBackColor = False
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.Color.White
+        Me.Button2.Location = New System.Drawing.Point(308, 14)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(123, 59)
+        Me.Button2.TabIndex = 1
+        Me.Button2.Text = "Occupied"
+        Me.Button2.UseVisualStyleBackColor = False
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.SystemColors.HighlightText
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Button1.Location = New System.Drawing.Point(179, 14)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(123, 59)
+        Me.Button1.TabIndex = 0
+        Me.Button1.Text = "Available"
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'frmMain
         '
